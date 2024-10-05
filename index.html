@@ -30,6 +30,17 @@
             background-color: #00ccbb;
         }
     </style>
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec React</title>
+    <!-- Inclure React via CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- Inclure Babel pour écrire du JSX directement dans le fichier -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
   </head>
   
   <body>
@@ -51,6 +62,29 @@
         <i class="fas fa-flask"></i>
     </a>
 </div>
+
+
+
+    <!-- Div où React sera monté -->
+    <div id="root"></div>
+
+    <!-- Script avec le code React -->
+    <script type="text/babel">
+        // Création d'un composant React
+        function App() {
+            return (
+                <div>
+                    <h1>Bonjour, React dans une page HTML!</h1>
+                    <p>Ceci est un exemple simple de React intégré directement dans une page HTML.</p>
+                </div>
+            );
+        }
+
+        // Montage du composant React dans l'élément div avec l'id "root"
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+
 
  <ul>
   <li>Coffee</li>
