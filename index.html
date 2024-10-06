@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Homepage</title>
+    <title> Guillaume Briand website</title>
     <!-- Ajout de Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -11,13 +11,16 @@
             display: flex;
             gap: 15px;
         }
-        .social-buttons a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 24px;
-            padding: 10px;
-            border-radius: 50%;
-            display: inline-block;
+        
+        .social-buttons-google a img {
+            width: 50px;  /* Ajuster la taille si nécessaire */
+            height: auto;
+        }
+         
+        .social-buttons-linkedin  a img {
+            width: 50px;  /* Ajuster la taille si nécessaire */
+            height: auto;
+            display: flex;
         }
         .social-google-scholar {
             background-color: #4d90fe;
@@ -28,61 +31,88 @@
         .social-research-gate {
             background-color: #00ccbb;
         }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        td {
+            text-align: center; /* Centrage horizontal */
+            vertical-align: middle; /* Centrage vertical */
+            padding: 10px;
+        }
+        .social-buttons-google, .social-buttons-linkedin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 50px; /* Ajuster la taille des logos */
+            height: auto;
+        }
+         
+         h1 {
+  	border: solid coral;
+	}
+
+
     </style>
-    <!-- Inclure React via CDN -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-    <!-- Inclure Babel pour écrire du JSX directement dans le fichier -->
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-     
+    
 </head>
 
 <body>
-    <h1>Hi, I'm Your Name!</h1>  
-    <p>Hello, world! This is my personal page hosted on GitHub pages.</p>
-    <p>Welcome to my website!</p> 
-
-    <a href="page2.html">Aller à la page 2</a>
+    <h1>  Welcome </h1>  
+    <p> Welcome to my personnal website </p>
     
-    <div class="social-buttons">
-        <a href="https://scholar.google.com/citations?user=VOTRE_ID" target="_blank" class="social-google-scholar">
-            <i class="fas fa-graduation-cap"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/VOTRE_ID" target="_blank" class="social-linkedin">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.researchgate.net/profile/VOTRE_ID" target="_blank" class="social-research-gate">
-            <i class="fas fa-flask"></i>
-        </a>
-    </div>
-
-    <!-- Div où React sera monté -->
-    <div id="root"></div>
-
-    <!-- Script avec le code React -->
-    <script type="text/babel">
-        // Création d'un composant React
-        function App() {
-            return (
-                <div>
-                    <h1>Bonjour, React dans une page HTML!</h1>
-                    <p>Ceci est un exemple simple de React intégré directement dans une page HTML.</p>
-                </div>
-            );
-        }
-
-        // Montage du composant React dans l'élément div avec l'id "root"
-        ReactDOM.render(<App />, document.getElementById('root'));
-    </script>
-
-    <div id="root"></div>
-    <script src="index.js" type="text/babel"></script>		
-
     <ul>
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
+        <li>  You can find  <a href="page_espci.html"> here </a> my differents projects conducted in Espci during my thesis </li>
+        <li>  You can find  <a href="page_UVA.html"> here </a> my project conducted in UVA in 2018/2019 </li>
     </ul> 
+     
+     
+ 
+	<div>
+	 <h1>   Social Networks </h1>
+ 	 
+
+<table border="0">
+    <thead>
+        <tr>
+            <td>Google Scholar</td>
+            <td>LinkedIn</td>
+            <td>ResearchGate</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div class="social-buttons-google">
+                    <a href="https://scholar.google.com/citations?user=pzpqn9gAAAAJ&hl=fr" target="_blank">
+                        <img src="./Reseaux_sociaux/google-scholar.svg" alt="Google Scholar Logo">
+                    </a>
+                </div> 
+            </td>
+            <td>
+                <div class="social-buttons-linkedin">
+                    <a href="https://www.linkedin.com/in/guillaume-briand-4484a0202/" target="_blank" class="social-linkedin">
+                        <img src="./Reseaux_sociaux/linkedin.png" alt="LinkedIn Logo">
+                    </a>
+                </div>
+            </td>
+            <td>
+                <div class="social-buttons-linkedin">
+                    <a href="https://www.researchgate.net/profile/VOTRE_ID" target="_blank" class="social-research-gate">
+                        <img src="./Reseaux_sociaux/research_gate.png" alt="ResearchGate Logo">
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+ 
+
+ 
 </body>
 </html>
 

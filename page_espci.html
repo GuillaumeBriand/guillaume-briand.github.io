@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./path/to/stylesheet/style.css" rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+    <style>
+        .centrer {
+            text-align: center;
+        }
+        
+        
+        body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+display: flex;
+    justify-content: center; /* Centre l'image et la carte horizontalement */
+    align-items: center;     /* Centre verticalement les éléments */
+    gap: 20px;               /* Espace entre l'image et la carte */
+    height: 306px;           /* Ajuste la hauteur totale du conteneur pour correspondre à la hauteur de la carte */
+}
+
+
+.container_images {
+    display: flex;
+    justify-content: center; /* Centre l'image et la carte horizontalement */
+    align-items: center;     /* Centre verticalement l'image et la carte */
+    gap: 100px;               /* Espace entre l'image et la carte */
+}	
+
+
+.left-image {
+    max-width: 1200px;        /* Ajuste la largeur de l'image */
+    height: 50px;           /* Fixe la hauteur de l'image pour correspondre à la hauteur de la carte */
+    object-fit: cover;       /* S'assure que l'image garde ses proportions dans la hauteur */
+    align-self: center; 
+    transform: translate(-50px, -200px); 
+}
+
+.map-container {
+    width: 342px;            /* Largeur du conteneur de la carte */
+    height: 306px;           /* Hauteur du conteneur de la carte */
+}
+
+ 
+
+	figure {
+	border: thin #c0c0c0 solid;
+	display: flex;
+	flex-flow: column;            /* Maintient la disposition en colonne */
+	padding: 5px;
+	max-width: 220px;
+	margin: 0;                    /* Enlever margin auto pour éviter le centrage */
+	}
+
+	img {
+	max-width: 220px;
+	max-height: 150px;
+	}
+
+	figcaption {
+	background-color: #222;
+	color: #fff;
+	font: italic smaller sans-serif;
+	padding: 3px;
+	text-align: center;
+	}
+
+     </style>
+    
+ 
+</head>
+<body>
+<p>
+    <h1> @Espci </h1>
+    	
+        <div class="centrer">
+    	        <img src="./Logos/espci_logo.png" alt="Image ESPCI" class="left-image">
+ <iframe title="ESPCI"
+        width="342"
+        height="306"
+        id="gmap_canvas"
+        src="https://maps.google.com/maps?q=10%20Rue%20Vauquelin,%2075005%20Paris&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    	frameborder="0"
+        scrolling="no">
+    </iframe>
+
+     </div>	
+        
+   </p>
+       <hr>
+    <p>
+    <h1> Publications </h1>	
+    <div>		
+    	<ul>
+ 		<li> <a href="https://arxiv.org/pdf/1605.03080">  Crystallization of Self-Propelled Hard Discs </a> ; <em>G Briand</em>, O Dauchot ; Physical review letters </li>
+ 		<video controls="" width="30%">
+    <source src="https://www.youtube.com/watch?v=DDJn670PeqU&list=RDMMDDJn670PeqU&start_radio=1" type="video/webm">
+    Sorry, your browser doesn't support embedded videos.
+</video>
+<video controls="" width="30%">
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
+ 		<li> <a href="https://hal.science/hal-01627495/file/2017PRL_briand_ledesma.pdf">  Active versus Passive Hard Disks against a Membrane: Mechanical Pressure and Instability </a>	 ; G Junot, <em>G Briand</em>, R Ledesma-Alonso, Olivier Dauchot ; Physical review letters </li>
+ <div class="container_images">		  
+   <figure>
+  <img src="https://journals.aps.org/prl/article/10.1103/PhysRevLett.119.028002/figures/1/medium" alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+
+ <figure>
+    <img src="https://journals.aps.org/prl/article/10.1103/PhysRevLett.119.028002/figures/2/medium" alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+  
+ <figure>
+    <img src="https://journals.aps.org/prl/article/10.1103/PhysRevLett.119.028002/figures/3/medium" alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+</div>
+<br>
+<br>
+ 		<li> <a href="https://hal.science/hal-01627495/file/2017PRL_briand_ledesma.pdf">  Spontaneously Flowing Crystal of Self-Propelled Particles </a> ; <em>G Briand</em>, Michael Schindler, Olivier Dauchot ; Physical review letters </li>
+ 		<li> <a href="https://arxiv.org/pdf/1712.00770">  Statistical analysis of random trajectories of vibrated disks: towards a macroscopic realization of brownian motion </a> ; Yann Lanoiselée, <em>G Briand</em>, Olivier Dauchot, Denis S Grebenkov ; Physical Review E </li>
+ 		<li> <a href="https://link.aps.org/accepted/10.1103/PhysRevE.106.064606">  Polymer-chain configurations in active and passive baths </a> ; Caleb J. Anderson, <em>G Briand</em>, Olivier Dauchot, Fernandez Nieves. Alberto ; Physical Review E </li>
+	</ul>
+	 
+    </div>
+    </p>
+    <hr>
+  <p>
+  
+    <h1> Collaborators </h1>
+    	
+        <div>
+    <ul>
+    <li> <a href="https://gulliver.spip.espci.fr/?olivier-dauchot-128">  Olivier Dauchot </a> </li>
+    <li> <a href="https://m-schindler.github.io/">  Michael Schindler </a> </li>
+    <li> <a href="https://scholar.google.com/citations?user=xBHzalkAAAAJ&hl=fr">  Gaspard Junot </a> </li>
+    <li> <a href="https://scholar.google.com/citations?user=SQ27SeIAAAAJ&hl=es">  René Ledesma </a> </li>
+    <li> <a href="https://scholar.google.fr/citations?user=_Nv4wTQAAAAJ&hl=fr">  Yann Lanoiselée </a> </li>
+    <li> <a href="https://scholar.google.fr/citations?user=7T24Yb0AAAAJ&hl=en">  Denis S Grebenkov </a> </li>
+    <li> <a href="https://www.researchgate.net/scientific-contributions/Caleb-Anderson-2172569858">  Caleb Anderson </a> </li>
+    <li> <a href="https://www.icrea.cat/Web/ScientificStaff/alberto-fernandez-nieves-280811">  Alberto Fernandez Nieves </a> </li>
+</ul>
+     </div>	
+        
+   </p>
+   
+    <hr>
+  <p>
+  
+    <h1> Conferences </h1>
+    	
+     
+        
+   </p>
+  
+</body>
+
+
+</html>
+
+
