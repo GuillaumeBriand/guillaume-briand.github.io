@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./path/to/stylesheet/style.css" rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>tricks Tor</title>
+    <style>
+        .centrer {
+            text-align: center;
+        }
+        
+        
+        body {
+    font-family: Arial, sans-serif;
+}
+ 
+.container {
+display: flex;
+    justify-content: center; /* Centre l'image et la carte horizontalement */
+    align-items: center;     /* Centre verticalement les éléments */
+    gap: 20px;               /* Espace entre l'image et la carte */
+    height: 306px;           /* Ajuste la hauteur totale du conteneur pour correspondre à la hauteur de la carte */
+}
+
+
+.container_images {
+    display: flex;
+    justify-content: center; /* Centre l'image et la carte horizontalement */
+    align-items: center;     /* Centre verticalement l'image et la carte */
+    gap: 100px;               /* Espace entre l'image et la carte */
+}	
+
+
+.left-image {
+    max-width: 1200px;        /* Ajuste la largeur de l'image */
+    height: 50px;           /* Fixe la hauteur de l'image pour correspondre à la hauteur de la carte */
+    object-fit: cover;       /* S'assure que l'image garde ses proportions dans la hauteur */
+    align-self: center;  
+    transform: translate(-50px, -200px);
+}
+
+.map-container {
+    width: 342px;            /* Largeur du conteneur de la carte */
+    height: 306px;           /* Hauteur du conteneur de la carte */
+}
+
+ 	 
+
+	figure {
+	border: thin #c0c0c0 solid;
+	display: flex;
+	flex-flow: column;            /* Maintient la disposition en colonne */
+	padding: 5px;
+	max-width: 500px;
+	margin: 0;                    /* Enlever margin auto pour éviter le centrage */
+	}
+
+	img {
+	max-width: 500px;
+	max-height: 300px;
+	}
+
+	figcaption {
+	background-color: #222;
+	color: #fff;
+	font: italic smaller sans-serif;
+	padding: 3px;
+	text-align: center;
+	}
+
+     </style>
+    
+ 
+</head>
+<body>
+<p>
+    <h1 text-align="center" > ToR </h1>
+    	
+        <div class="centrer">
+    	        <img src="./Logos/tor.png" alt="Image Tor">
+  	
+	 </div>
+<br>
+<h2>Discussion avec ChatGpt :</h2>
+<div> 	
+<h2>Ouvrir le fichier de configuration de Tor :</h2>
+
+Pour forcer Tor à se connecter à un serveur (nœud) d'un pays particulier sous Ubuntu, vous devez modifier le fichier de configuration de Tor. Voici comment procéder :
+
+   Ouvrez un terminal et éditez le fichier de configuration de Tor (`torrc`) avec un éditeur de texte. Par exemple, vous pouvez utiliser `nano` ou `gedit` :
+
+   ```bash
+   sudo nano /etc/tor/torrc
+   ```
+
+   ou
+
+   ```bash
+   sudo gedit /etc/tor/torrc
+   ```
+ </div>
+<br>
+
+<div>
+<h2>Ajouter les directives de configuration :</h2>
+
+
+   Pour forcer Tor à utiliser des nœuds dans un pays spécifique, vous pouvez utiliser les options `ExitNodes`, `EntryNodes` et `StrictNodes`. Voici ce que vous devez ajouter :
+
+   - **Pour spécifier les nœuds de sortie (c'est-à-dire le pays par lequel votre trafic sortira de Tor) :**
+
+     ```bash
+     ExitNodes {FR}
+     ```
+
+     où `{FR}` est le code pays du pays que vous voulez (ici la France). Remplacez `{FR}` par le code pays désiré (par exemple `{DE}` pour l'Allemagne, `{US}` pour les États-Unis, etc.).
+
+   - **Pour spécifier les nœuds d'entrée :**
+
+     Vous pouvez également définir les nœuds d'entrée de la même manière avec `EntryNodes` :
+
+     ```bash
+     EntryNodes {FR}
+     ```
+
+   - **Pour s'assurer que Tor respecte ces préférences :**
+
+     Ajoutez la directive `StrictNodes` pour obliger Tor à n'utiliser que les nœuds spécifiés :
+
+     ```bash
+     StrictNodes 1
+     ```
+
+   Voici un exemple de ce que cela pourrait donner dans le fichier `torrc` :
+
+   ```bash
+   ExitNodes {FR}
+   EntryNodes {FR}
+   StrictNodes 1
+    ```
+ </div>
+<br>
+
+<div>
+<h2>Enregistrer et quitter :</h2>
+
+   Si vous utilisez `nano`, appuyez sur `Ctrl+O` pour enregistrer les modifications, puis `Ctrl+X` pour quitter l'éditeur.
+<\div>
+
+
+<br>
+
+<div>
+<h2>Redémarrer le service Tor :</h2>
+
+   Après avoir modifié le fichier de configuration, vous devez redémarrer Tor pour appliquer les changements :
+
+   ```bash
+   sudo systemctl restart tor
+   ```
+ </div>
+
+
+<br>
+
+<div>
+<h2>Vérifier que Tor utilise bien les nœuds du pays choisi :</h2>
+
+
+   Vous pouvez vérifier que Tor utilise bien des nœuds du pays choisi en consultant votre nouvelle adresse IP avec un service comme [whatismyip.com](https://www.whatismyip.com/) tout en étant connecté à Tor.
+
+Ces étapes devraient vous permettre de forcer Tor à se connecter à des nœuds spécifiques d'un pays particulier.
+ 
+ 
+En résumé, en configurant Firefox pour utiliser `127.0.0.1:9050`, tu forces ton navigateur à utiliser Tor pour tout son trafic, ce qui améliore ta confidentialité en ligne en masquant ton adresse IP et en cryptant ton trafic.  	
+ </div>
+        
+ </p>
+   
+    
+      
+    <p>
+	<h2>Commandes :</h2>
+  	<ul>
+  	<li> sudo apt install tor </li>
+    	<li>	sudo systemctl start tor </li>
+    	<li> sudo systemctl status tor </li>
+    	<li> sudo gedit /etc/tor/torrc </li>
+    	<li> sudo systemctl restart tor </a> </li>
+	</ul>
+	
+   </p>	
+
+ 
+  <p>
+	<h2>Quelques sites </h2>
+  	<ul>
+  	  <li> <a href="https://metrics.torproject.org/">  metrics.torproject </a> </li>
+    	  <li> <a href="https://metrics.torproject.org/rs.html#search/france">  metrics.torproject </a> </li>
+    	  <li> <a href="https://metrics.torproject.org/sources.html">  /metrics.torproject.org/sources </a> </li>
+    	  <li> <a href="https://www.whatismyip.com/">  whatismyip </a> </li>
+    	  <li> <a href="https://doc.ubuntu-fr.org/tor">  whatismyip </a> </li>
+	</ul>
+	
+   </p>	
+    
+  
+</body>
+
+
+</html>
+
+

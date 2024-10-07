@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./path/to/stylesheet/style.css" rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>tricks Tor</title>
+    <style>
+        .centrer {
+            text-align: center;
+        }
+        
+        
+        body {
+    font-family: Arial, sans-serif;
+}
+ 
+.container {
+display: flex;
+    justify-content: center; /* Centre l'image et la carte horizontalement */
+    align-items: center;     /* Centre verticalement les éléments */
+    gap: 20px;               /* Espace entre l'image et la carte */
+    height: 306px;           /* Ajuste la hauteur totale du conteneur pour correspondre à la hauteur de la carte */
+}
+
+
+.container_images {
+    display: flex;
+    justify-content: center; /* Centre l'image et la carte horizontalement */
+    align-items: center;     /* Centre verticalement l'image et la carte */
+    gap: 100px;               /* Espace entre l'image et la carte */
+}	
+
+
+.left-image {
+    max-width: 1200px;        /* Ajuste la largeur de l'image */
+    height: 50px;           /* Fixe la hauteur de l'image pour correspondre à la hauteur de la carte */
+    object-fit: cover;       /* S'assure que l'image garde ses proportions dans la hauteur */
+    align-self: center;  
+    transform: translate(-50px, -200px);
+}
+
+.map-container {
+    width: 342px;            /* Largeur du conteneur de la carte */
+    height: 306px;           /* Hauteur du conteneur de la carte */
+}
+
+ 	 
+
+	figure {
+	border: thin #c0c0c0 solid;
+	display: flex;
+	flex-flow: column;            /* Maintient la disposition en colonne */
+	padding: 5px;
+	max-width: 500px;
+	margin: 0;                    /* Enlever margin auto pour éviter le centrage */
+	}
+
+	img {
+	max-width: 500px;
+	max-height: 300px;
+	}
+
+	figcaption {
+	background-color: #222;
+	color: #fff;
+	font: italic smaller sans-serif;
+	padding: 3px;
+	text-align: center;
+	}
+
+     </style>
+    
+ 
+</head>
+<body>
+     
+<p>
+	<h2> Apt </h2>
+  	<ul>
+  	<li> sudo apt-get install nombre_del_paquete </li>
+	<li> sudo apt remove [Nom du package] </li>
+    	<li> sudo apt autoremove </li> 
+    	<li> sudo apt update </li>
+    	<li> sudo apt upgrade </li> 
+    	<li> <a href="https://help.ubuntu.com/kubuntu/desktopguide/es/apt-get.html/">  apt-get </a> </li>     
+    	    	<li> <a href="https://ubuntu.com/server/docs/package-management/">  package-management </a> </li>     		
+	</ul>
+	
+</p>	
+
+<p>
+	<h2> Snap </h2>
+  	<ul>
+  	<li> sudo snap remove [Nom du package] </li>
+  	</ul>
+</p>
+ 
+<p>
+	<h2> dpkg </h2>
+  	<ul>
+  	<li> dpkg -l to list </li> 
+  	<li> sudo dpkg -i [Nom du package].deb to install </li> 
+  	<li> sudo dpkg -r zipto install </li> 
+    	<li> dpkg -l | grep [Nom du package] </li>
+    	</ul>
+	
+</p>
+</body>
+
+
+</html>
+
+
